@@ -1,0 +1,40 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 1px 3px 8px 1px #5d5d5d4d;
+  backdrop-filter: blur(5px);
+  .header-cover {
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .my-logo {
+      img {
+        width: 45px;
+        height: 50px;
+      }
+    }
+    .navigator {
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .nav-item {
+          list-style-type: none;
+          margin-left: $mg-6;
+          a {
+            text-decoration: none;
+            font-weight: $fw-500;
+            letter-spacing: 1px;
+            color: $color-template-hot-2;
+            font-family: "Montserrat Alternates", sans-serif;
+          }
+        }
+      }
+    }
+  }
+}

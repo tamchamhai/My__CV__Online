@@ -1,0 +1,30 @@
+// Helper
+@import "./Helpers/variables";
+@import "./Helpers/animation";
+@import "./Helpers/function";
+@import "./Helpers/mixin";
+
+// Base
+@import "./Base/reset";
+@import "./Base/normalize";
+
+// Component
+@import "./Components/title";
+@import "./Components/glassmorphism";
+
+// Layouts
+@import "./Layouts/header";
+@import "./Layouts/carousel";
+@import "./Layouts/infome";
+@import "./Layouts/education";
+
+// Pages
+@import "./Pages/preloader";
+
+// Responsive
+@import "./Responsive/lgScreen";
+@import "./Responsive/mdScreen";
+@import "./Responsive/smScreen";
+
+// Themes
+@import "./Themes/dark";

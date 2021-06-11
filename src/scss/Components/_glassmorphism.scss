@@ -1,0 +1,9 @@
+.glassmorphism {
+  background-color: $color-bg-filter-2;
+  box-shadow: 12px 12px 12px $color-sha-1;
+  border-bottom: 1px solid $color-bg-filter-1;
+  border-right: 1px solid $color-bg-filter-1;
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  animation: fadeInDown 1s ease forwards;
+}

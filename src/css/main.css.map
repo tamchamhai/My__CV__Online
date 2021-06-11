@@ -1,0 +1,20 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,CAAC,CAAC;EACA,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,UAAU;CACvB;;AAED,AAAA,IAAI,CAAC;EACH,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,MAAM;CACxB;;AMTD,AACE,eADa,CACb,UAAU,CAAC;EACT,QAAQ,EAAE,KAAK;EACf,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,eAAe;CACxB",
+    "sources": [
+        "../scss/main.scss",
+        "../scss/Base/_reset.scss",
+        "../scss/Base/_normalize.scss",
+        "../scss/Helpers/_variables.scss",
+        "../scss/Helpers/_animation.scss",
+        "../scss/Helpers/_function.scss",
+        "../scss/Helpers/_mixin.scss",
+        "../scss/Pages/_preloader.scss",
+        "../scss/Responsive/_lgScreen.scss",
+        "../scss/Responsive/_mdScreen.scss",
+        "../scss/Responsive/_smScreen.scss",
+        "../scss/Themes/_dark.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
