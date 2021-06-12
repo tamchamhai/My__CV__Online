@@ -80,7 +80,8 @@
             /></a>
           </div>
           <nav class="navigator">
-            <ul>
+            <div class="nav-btn-display" id="nav-toggle-btn"></div>
+            <ul id="navbar-list">
               <li class="nav-item"><a href="#home">Home</a></li>
               <li class="nav-item"><a href="#about">About</a></li>
               <li class="nav-item"><a href="#education">Education</a></li>
@@ -93,9 +94,6 @@
       </header>
       <!-- Start Carousel -->
       <section class="carousel" id="home">
-        <div class="bg-block">
-          <div class="wow bg-block-one"></div>
-        </div>
         <div class="carousel-cover">
           <div class="banner-left">
             <h4>Hello World! 🌏</h4>
@@ -275,7 +273,7 @@
                 class="
                   wow
                   work-block
-                  animate__animated animate__bounceInRight
+                  animate__animated animate__bounceInLeft
                   delay-5
                 "
               >
@@ -293,8 +291,8 @@
                 class="
                   wow
                   work-block
-                  animate__animated animate__bounceInLeft
-                  delay-10
+                  animate__animated animate__bounceInRight
+                  delay-8
                 "
               >
                 <h3 class="title-block">
@@ -326,36 +324,18 @@
                 class="
                   wow
                   work-block
-                  animate__animated animate__bounceInRight
-                  delay-5
-                "
-              >
-                <h3 class="title-block">
-                  Ho Chi Minh City University of Technology and Education
-                </h3>
-                <p>June 2013 - July 2018</p>
-                <ul class="work-descripbe">
-                  <li class="work-item">Bachelor of Electrical engineer</li>
-                  <li class="work-item">Grade: medium</li>
-                  <li class="work-item">GPA: 2.3/4</li>
-                </ul>
-              </div>
-              <div
-                class="
-                  wow
-                  work-block
                   animate__animated animate__bounceInLeft
-                  delay-10
+                  delay-12
                 "
               >
                 <h3 class="title-block">
-                  Nidec Vietnam Corporation Technical Center
+                  Cybersoft - Cyberlearn Programing Education Center
                 </h3>
-                <p>July 2018 - Feb 2019</p>
+                <p>Sep 2020 - June 2021</p>
                 <ul class="work-descripbe">
                   <li class="work-item">
                     <strong>Programming course:</strong> thinking in
-                    programming, problem-solving, Java language, OOP
+                    programming, problem-solving, Javascript language, OOP...
                   </li>
                   <li class="work-item">
                     <strong>Front-end Foundation course:</strong> basic
@@ -364,16 +344,35 @@
                   </li>
                 </ul>
               </div>
+              <div
+                class="
+                  wow
+                  work-block
+                  animate__animated animate__bounceInRight
+                  delay-14
+                "
+              >
+                <h3 class="title-block">Personal Projects</h3>
+                <p>May 2021 - Present</p>
+                <ul class="work-descripbe">
+                  <li class="work-item">
+                    Learning and practicing with many Front-end projects
+                  </li>
+                  <li class="work-item">
+                    Working on my own projects with learned Front-end skills
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <!-- Start Skills -->
-      <section class="skills"></section>
+      <section class="skills" id="skills"></section>
       <!-- Start Portfolio -->
-      <section class="portfolios"></section>
+      <section class="portfolios" id="porrfolios"></section>
       <!-- Start Footer -->
-      <footer class="footer"></footer>
+      <footer class="footer" id="footer"></footer>
     </div>
 
     <!-- Jquery -->

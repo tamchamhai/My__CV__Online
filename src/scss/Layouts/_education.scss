@@ -1,7 +1,7 @@
 .education {
   position: relative;
   background-color: $color-bg-3;
-  min-height: 800px;
+  min-height: 750px;
   &::before {
     content: "";
     position: absolute;
@@ -75,5 +75,22 @@
     border-radius: 10px;
     transform: scale(1);
     transform-origin: center center;
+  }
+}
+
+// Responsive
+@media screen and(max-width: 768px) {
+  .education {
+    .education-cover {
+      .content-column {
+        .university-row,
+        .cybersoft-row {
+          display: block;
+        }
+      }
+    }
+  }
+  .work-block {
+    width: 100%;
   }
 }

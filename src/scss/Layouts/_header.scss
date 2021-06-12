@@ -19,10 +19,48 @@
       }
     }
     .navigator {
-      ul {
+      #nav-toggle-btn.active-btn-ham {
+        background: transparent;
+        &::before {
+          background: $color-template-hot-4;
+          transform: translateY(0) rotate(45deg);
+        }
+        &::after {
+          background: $color-template-hot-4;
+          transform: translateY(0) rotate(-45deg);
+        }
+      }
+      #nav-toggle-btn {
+        position: relative;
+        width: 29px;
+        height: 3px;
+        margin-right: $mg-2;
+        background: $color-template-hot-2;
+        transition: all 0.4s;
+        &::before {
+          position: absolute;
+          transition: all 0.4s;
+          transform: translateY(-10px);
+          content: "";
+          width: 29px;
+          height: 3px;
+          background: $color-template-hot-2;
+        }
+        &::after {
+          position: absolute;
+          transition: all 0.4s;
+          transform: translateY(10px);
+          content: "";
+          width: 29px;
+          height: 3px;
+          background: $color-template-hot-2;
+        }
+      }
+      #navbar-list {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        transition: all 0.4s;
         .nav-item {
           list-style-type: none;
           margin-left: $mg-6;
@@ -36,5 +74,48 @@
         }
       }
     }
+  }
+}
+.nav-btn-display {
+  display: none;
+}
+#nav-toggle-btn.active-btn-ham {
+  background: $color-template-hot-4;
+}
+// Responsive
+@media screen and(max-width: 768px) {
+  .header {
+    width: 100%;
+    .header-cover {
+      position: relative;
+      padding: 10px 15px;
+      .navigator {
+        #navbar-list.active-navbar-list {
+          // transform: translateX(-100%);
+          right: 0;
+        }
+        #navbar-list {
+          position: fixed;
+          right: -100%;
+          top: 76px;
+          width: 300px;
+          flex-direction: column;
+          align-items: start;
+          background: rgba(255, 255, 255, 0.4);
+          box-shadow: 12px 12px 12px $color-sha-1;
+          border-bottom: 1px solid $color-bg-filter-1;
+          border-right: 1px solid $color-bg-filter-1;
+          backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
+          z-index: 2;
+          .nav-item {
+            padding: $pd-2 $pd-4;
+          }
+        }
+      }
+    }
+  }
+  .nav-btn-display {
+    display: block;
   }
 }
