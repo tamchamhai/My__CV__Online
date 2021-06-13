@@ -32,3 +32,32 @@ $("#nav-toggle-btn").click(() => {
   getEle("nav-toggle-btn").classList.toggle("active-btn-ham");
   getEle("navbar-list").classList.toggle("active-navbar-list");
 });
+
+// Skill section: handle active indicator
+let skill_item = document.querySelectorAll(".item");
+let skill_wrap = document.querySelectorAll(".skill-wrap");
+let skill_wrap_item = document.querySelectorAll(".skill-wrap-item");
+for (let i = 0; i < skill_item.length; i++) {
+  skill_item[i].onmouseover = () => {
+    let j = 0;
+    while (j < skill_item.length) {
+      skill_item[j].className = "item";
+      skill_wrap[j].classList.remove("dis-block");
+      skill_wrap[j].classList.add("dis-none");
+      j++;
+    }
+    skill_item[i].className = "item skill-active";
+    skill_wrap[i].classList.add("dis-block");
+    skill_wrap[i].classList.remove("dis-none");
+  };
+}
+skill_item.forEach((elements) => {
+  elements.addEventListener("mouseenter", (event) => {
+    let bg = getEle("skills");
+    let color = event.target.getAttribute("data-color");
+    bg.style.backgroundColor = color;
+    for (let i = 0; i < skill_wrap_item.length; i++) {
+      skill_wrap_item[i].style.backgroundColor = color;
+    }
+  });
+});

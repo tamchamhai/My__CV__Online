@@ -206,13 +206,38 @@
   .carousel {
     padding: 0 $pd-3;
     .carousel-cover {
-      display: block;
       .banner-left {
-        width: 100%;
+        width: 98%;
         height: 100vh;
       }
       .banner-right {
-        display: none;
+        .photo-me {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media screen and(max-width: 425px) {
+  .carousel {
+    padding: 0 $pd-3;
+    .carousel-cover {
+      .banner-left {
+        width: 98%;
+        height: 100vh;
+        .typing-wrap {
+          .typing-text {
+            font-size: $fs-5;
+          }
+        }
+        .bios {
+          font-size: $fs-1;
+        }
+      }
+      .banner-right {
+        .photo-me {
+          display: none;
+        }
       }
     }
   }
