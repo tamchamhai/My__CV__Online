@@ -47,7 +47,7 @@
         }
       }
       .downloadCV {
-        background: $color-bg-1;
+        background: $color-bg-4;
         font-size: $fs-1;
         width: 200px;
         padding: $pd-3 $pd-2;
@@ -81,7 +81,7 @@
           width: 460px;
           height: 460px;
           border-radius: 50%;
-          background: $color-bg-1;
+          background: $color-bg-4;
         }
         img {
           width: auto;
@@ -159,7 +159,7 @@
             justify-content: center;
             align-items: center;
             color: #fff;
-            background: $color-bg-1;
+            background: $color-bg-4;
             cursor: pointer;
             &:hover {
               animation: heartBeat 2s ease infinite;

@@ -1,0 +1,76 @@
+.contact {
+  position: relative;
+  height: 100vh;
+  background: $color-bg-6;
+  padding: $pd-21 $pd-12;
+  .contact-cover {
+    display: flex;
+    justify-content: space-between;
+    .contact-text {
+      width: 48%;
+      h2 {
+        font-size: $fs-13;
+        margin-bottom: $mg-3;
+      }
+      p {
+        line-height: $fs-4;
+      }
+      .contact-arrow {
+        margin-left: $mg-6;
+        font-size: $fs-3;
+        --animate-duration: 4s;
+        display: inline-block;
+      }
+    }
+    .contact-info {
+      width: 48%;
+      h3 {
+        margin-bottom: $mg-3;
+        font-size: $fs-6;
+      }
+      .address-item {
+        margin-bottom: $mg-2;
+        .fa {
+          display: inline-block;
+          width: 30px;
+        }
+      }
+      .contact-social {
+        display: flex;
+        margin-top: $mg-6;
+        .contact-social-icon {
+          width: 50px;
+          overflow: hidden;
+          transition: 0.4s;
+          margin-right: $mg-3;
+          &:hover {
+            width: 190px;
+          }
+          a {
+            // text-align: center;
+            width: 300px;
+            display: inline-block;
+            text-decoration: none;
+            color: #000;
+            line-height: $fs-9;
+            .icon-contact {
+              font-size: $fs-6;
+              width: $fs-9;
+              height: $fs-9;
+              line-height: $fs-9;
+              border: 2px solid #000;
+              text-align: center;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -61,3 +61,22 @@ skill_item.forEach((elements) => {
     }
   });
 });
+
+// Parallax scrolling farewell bg
+let moon = getEle("moon");
+let star = getEle("star");
+let mountains_behind = getEle("mountains_behind");
+let mountains_front = getEle("mountains_front");
+let farewell_text = getEle("farewell_text");
+window.addEventListener("scroll", () => {
+  let value = window.scrollY;
+  console.log(value);
+  star.style.left = (value - 2857) * 0.15 + "px";
+  moon.style.top = (value - 2857) * 1.05 + "px";
+  if (value > 2857) {
+    mountains_behind.style.top = (value - 2857) * 0.5 + "px";
+  }
+  mountains_front.style.top = (value - 2857) * 0 + "px";
+  farewell_text.style.marginRight = (value - 2857) * 7 - 350 + "px";
+  farewell_text.style.marginTop = value - 2857 + "px";
+});

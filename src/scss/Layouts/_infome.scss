@@ -1,6 +1,7 @@
 .info-me {
+  background-attachment: fixed;
   position: relative;
-  background: #091921;
+  background: linear-gradient(to top, #2b1055, transparent);
   min-height: 800px;
   .bg-color-block {
     position: absolute;
