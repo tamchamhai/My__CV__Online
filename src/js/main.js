@@ -1,4 +1,5 @@
-import Typed from "../../node_modules/typed.js/src/typed.js";
+// import Typed from "../../node_modules/typed.js/src/typed.js";
+// import Typed from "./typed.js";
 new WOW().init();
 let getEle = (id) => {
   return document.getElementById(id);
