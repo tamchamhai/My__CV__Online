@@ -2,7 +2,7 @@
   position: relative;
   padding: 0 $pd-12;
   min-height: 625px;
-  background: $color-bg-3;
+  background: $color-bg-6;
 
   .carousel-cover {
     position: relative;
@@ -13,7 +13,7 @@
     bottom: 0;
     display: flex;
     justify-content: space-between;
-    color: $color-template-hot-2;
+    color: #000;
     letter-spacing: $leter-spacing-2;
     .banner-left {
       width: 40%;
@@ -54,8 +54,7 @@
         margin-left: $mg-1;
         text-align: center;
         border-radius: 50px;
-        border-top: 2px solid rgba(255, 255, 255, 0.8);
-        border-left: 2px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
         color: #fff;
         backdrop-filter: blur(5px);
       }
@@ -70,8 +69,9 @@
         left: 30%;
         width: 100%;
         height: 100%;
-        // overflow: hidden;
         animation: fadeInUp 2s forwards;
+        visibility: hidden;
+        opacity: 0;
         &::after {
           content: "";
           position: absolute;
@@ -95,6 +95,8 @@
         bottom: 0;
         height: 100%;
         animation: backInUp 2s forwards;
+        visibility: hidden;
+        opacity: 0;
         .social-icons {
           height: 100%;
           padding: $pd-10 0;
@@ -114,7 +116,7 @@
             .social-item {
               list-style-type: none;
               font-size: $fs-2;
-              border: 2px solid $color-template-hot-2;
+              border: 2px solid #000;
               width: 40px;
               height: 40px;
               border-radius: 50%;
@@ -126,8 +128,8 @@
               transition: all 0.4s;
               position: relative;
               &:hover {
-                border: 2px solid $color-template-hot-1;
-                background-color: $color-template-hot-1;
+                border: 2px solid #000;
+                background-color: #000;
                 transform: scale(1.2);
                 // animation: rotateIcon 0.8s linear;
                 .tooltip {
@@ -141,7 +143,8 @@
                 color: #fff;
               }
               a {
-                color: $color-template-hot-2;
+                color: #000;
+                font-size: $fs-3;
                 line-height: 40px;
                 text-align: center;
               }

@@ -11,6 +11,9 @@ html {
   letter-spacing: $leter-spacing-2;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
 body {
   font-family: "Montserrat", sans-serif;
 }

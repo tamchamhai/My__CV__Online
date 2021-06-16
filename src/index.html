@@ -26,7 +26,6 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-
     <!-- Animate CSS -->
     <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
     <!-- Main CSS -->
@@ -35,7 +34,7 @@
   <body>
     <div class="main-container">
       <!-- Start Preloader -->
-      <div class="preloader dis-none">
+      <div id="preloader" class="preloader">
         <div class="preloader-cover">
           <svg
             viewBox="0 -250 1440 1440"
@@ -71,29 +70,9 @@
           </svg>
         </div>
       </div>
-      <!-- Start Header -->
-      <header id="header" class="header">
-        <div class="header-cover">
-          <div class="my-logo">
-            <a href="#home"
-              ><img src="./assets/icons/myLogoSvg.svg" alt="my logo brand"
-            /></a>
-          </div>
-          <nav class="navigator">
-            <div class="nav-btn-display" id="nav-toggle-btn"></div>
-            <ul id="navbar-list">
-              <li class="nav-item"><a href="#home">Home</a></li>
-              <li class="nav-item"><a href="#about">About</a></li>
-              <li class="nav-item"><a href="#education">Education</a></li>
-              <li class="nav-item"><a href="#skills">Skills</a></li>
-              <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
-              <li class="nav-item"><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+
       <!-- Start Carousel -->
-      <section class="carousel" id="home">
+      <section class="carousel section scrollspy" id="home">
         <div class="carousel-cover">
           <div class="banner-left">
             <h4>Hello World! 🌏</h4>
@@ -123,32 +102,46 @@
             >
           </div>
           <div class="banner-right">
-            <div class="wow photo-me">
+            <div class="wow photo-me" data-wow-delay="5s">
               <img src="./assets/img/photome.png" alt="photo of me" />
             </div>
-            <div class="wow social-link">
+            <div class="wow social-link" data-wow-delay="5.2s">
               <div class="social-icons">
                 <ul id="social-item-box">
                   <li class="social-item facebook">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a
+                      target="blank"
+                      href="https://www.facebook.com/ngophilongspkt"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
                     <div class="tooltip">
                       <span>My facebook</span>
                     </div>
                   </li>
                   <li class="social-item github">
-                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a target="blank" href="https://github.com/tamchamhai"
+                      ><i class="fab fa-github"></i
+                    ></a>
                     <div class="tooltip">
                       <span>My github</span>
                     </div>
                   </li>
                   <li class="social-item codepen">
-                    <a href="#"><i class="fab fa-codepen"></i></a>
+                    <a target="blank" href="https://codepen.io/tamchamhai"
+                      ><i class="fab fa-codepen"></i
+                    ></a>
                     <div class="tooltip">
                       <span>My codepen</span>
                     </div>
                   </li>
                   <li class="social-item gmail">
-                    <a href="#"> <i class="fab fa-google"></i></a>
+                    <a
+                      target="blank"
+                      type="email"
+                      href="mailto:ngophilongspkt@gmail.com"
+                    >
+                      <i class="fab fa-google"></i
+                    ></a>
                     <div class="tooltip">
                       <span>My google</span>
                     </div>
@@ -166,7 +159,7 @@
         </div>
       </section>
       <!-- Info me -->
-      <section class="info-me" id="about">
+      <section class="info-me section scrollspy" id="about">
         <div class="bg-color-block"></div>
         <div class="bg-color-block-two"></div>
         <div class="box-content wow">
@@ -260,7 +253,7 @@
         </div>
       </section>
       <!-- Start Education -->
-      <section class="education" id="education">
+      <section class="education section scrollspy" id="education">
         <div class="education-cover">
           <div class="title-wrap">
             <h1 class="title wow animate__animated delay-10 animate__fadeInUp">
@@ -368,7 +361,7 @@
         </div>
       </section>
       <!-- Start Skills -->
-      <section class="skills" id="skills">
+      <section class="skills section scrollspy" id="skills">
         <div class="title-wrap">
           <h1 class="title wow animate__animated delay-1 animate__fadeInUp">
             Skills <span class="sub-title">me</span>
@@ -454,11 +447,13 @@
         </div>
       </section>
       <!-- Start Portfolio -->
-      <section class="portfolios" id="porrfolios"></section>
+      <section class="portfolios section scrollspy" id="porrfolios">
+        <div class="portfolio-cover"></div>
+      </section>
       <!-- Transparent section -->
-      <section class="transparent"></section>
+      <section class="transparent section" id="transparent"></section>
       <!-- Farewell background -->
-      <section class="farewell-bg">
+      <section class="farewell-bg" id="farewell">
         <div class="farewell-cover">
           <img id="star" src="./assets/img/stars.png" alt="star" />
           <img id="moon" src="./assets/img/moon.png" alt="moon" />
@@ -476,7 +471,7 @@
         </div>
       </section>
       <!-- Start Footer -->
-      <footer class="contact" id="contact">
+      <footer class="contact section scrollspy" id="contact">
         <div class="contact-cover">
           <div class="contact-text wow animate__animated animate__fadeInDown">
             <h2>As a front end developer</h2>
@@ -484,15 +479,17 @@
               I'm always interested in how customers feel and the productivity I
               bring to employers. If you're interested in what I've done, don't
               hesitate to contact me.
-              <span
-                class="
-                  contact-arrow
-                  wow
-                  delay-10
-                  animate__shakeX animate__infinite animate__animated
-                "
-                >👉</span
-              >
+              <span class="block-arrow">
+                <span
+                  class="
+                    contact-arrow
+                    wow
+                    delay-10
+                    animate__shakeX animate__infinite animate__animated
+                  "
+                  >👉</span
+                >
+              </span>
             </p>
           </div>
           <div
@@ -521,22 +518,22 @@
 
             <div class="contact-social">
               <div class="contact-social-icon">
-                <a href="#"
+                <a href="https://www.facebook.com/ngophilongspkt"
                   ><i class="icon-contact fab fa-facebook-f"></i> My Facebook</a
                 >
               </div>
               <div class="contact-social-icon">
-                <a href="#"
+                <a href="https://github.com/tamchamhai"
                   ><i class="icon-contact fab fa-github"></i> My Github</a
                 >
               </div>
               <div class="contact-social-icon">
-                <a href="#"
+                <a href="https://codepen.io/tamchamhai"
                   ><i class="icon-contact fab fa-codepen"></i> My Codepen</a
                 >
               </div>
               <div class="contact-social-icon">
-                <a href="#">
+                <a href="mailto:ngophilongspkt@gmail.com">
                   <i class="icon-contact fab fa-google"></i> My Google</a
                 >
               </div>
@@ -544,9 +541,42 @@
           </div>
         </div>
         <div class="copyright">
-          <p><i class="fa fa-copyright"></i> Copyright 2021</p>
+          <p>© Copyright 2021</p>
         </div>
       </footer>
+      <!-- Start Header -->
+      <header id="header" class="header">
+        <div class="header-cover">
+          <div class="my-logo">
+            <a href="#home"
+              ><img src="./assets/icons/myLogoSvg.svg" alt="my logo brand"
+            /></a>
+          </div>
+          <nav class="navigator">
+            <div class="nav-btn-display" id="nav-toggle-btn"></div>
+            <ul id="navbar-list">
+              <li class="nav-item">
+                <a class="header-nav" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="header-nav" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="header-nav" href="#education">Education</a>
+              </li>
+              <li class="nav-item">
+                <a class="header-nav" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="header-nav" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="header-nav" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
     </div>
 
     <!-- Jquery -->
