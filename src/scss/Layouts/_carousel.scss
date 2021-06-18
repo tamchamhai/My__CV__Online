@@ -81,7 +81,12 @@
           width: 460px;
           height: 460px;
           border-radius: 50%;
-          background: $color-bg-4;
+          background-image: url(../assets/img/earth.jpeg);
+          visibility: hidden;
+          opacity: 0;
+          box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
+          animation: fadeInDownBig 2s 4.5s linear forwards,
+            spin-earth 25s alternate-reverse linear infinite;
         }
         img {
           width: auto;
@@ -202,6 +207,14 @@
 }
 .tooltip-active {
   transform: translateX(1000%);
+}
+
+@keyframes spin-earth {
+  100% {
+    background-position: 100%;
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 // Responsive

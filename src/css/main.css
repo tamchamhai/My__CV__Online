@@ -395,7 +395,11 @@ a[href="#contact"] {
           width: 460px;
           height: 460px;
           border-radius: 50%;
-          background: #f53b57; }
+          background-image: url(../assets/img/earth.jpeg);
+          visibility: hidden;
+          opacity: 0;
+          box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
+          animation: fadeInDownBig 2s 4.5s linear forwards, spin-earth 25s alternate-reverse linear infinite; }
         .carousel .carousel-cover .banner-right .photo-me img {
           width: auto;
           height: 100%; }
@@ -494,6 +498,12 @@ a[href="#contact"] {
 
 .tooltip-active {
   transform: translateX(1000%); }
+
+@keyframes spin-earth {
+  100% {
+    background-position: 100%;
+    visibility: visible;
+    opacity: 1; } }
 
 @media screen and (max-width: 768px) {
   .carousel {
@@ -629,7 +639,8 @@ a[href="#contact"] {
     .education .education-cover .content-column .university-row,
     .education .education-cover .content-column .cybersoft-row {
       display: flex;
-      justify-content: space-around; }
+      justify-content: space-around;
+      transition: 0.4s; }
 
 .work-block {
   width: 40%;
@@ -639,7 +650,7 @@ a[href="#contact"] {
   background-color: #dbe6fd;
   transform: scale(0.8);
   transform-origin: center center;
-  transition: all 0.6s; }
+  transition: 0.4s; }
   .work-block h3 {
     text-transform: capitalize;
     color: #900c3f;
@@ -669,6 +680,126 @@ a[href="#contact"] {
     display: block; }
   .work-block {
     width: 100%; } }
+
+.portfolios {
+  background-color: #0fbcf9;
+  height: 625px;
+  padding: 60px; }
+  .portfolios .portfolio-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .portfolios .portfolio-cover .portfolio-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .portfolios .portfolio-cover .portfolio-container .slider-content {
+        margin-top: 35px;
+        position: relative; }
+        .portfolios .portfolio-cover .portfolio-container .slider-content .sliders {
+          position: relative;
+          width: 600px;
+          height: 380px;
+          overflow: hidden;
+          border-radius: 30px; }
+          .portfolios .portfolio-cover .portfolio-container .slider-content .sliders .slider-item {
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+            padding: 25px;
+            overflow: hidden;
+            box-shadow: inset 0 12px 14px rgba(0, 0, 0, 0.3);
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            animation: bounceInLeft 2s linear; }
+            .portfolios .portfolio-cover .portfolio-container .slider-content .sliders .slider-item:hover .overlay {
+              visibility: visible;
+              opacity: 1;
+              animation: fadeIn 1s linear; }
+            .portfolios .portfolio-cover .portfolio-container .slider-content .sliders .slider-item .overlay {
+              visibility: hidden;
+              opacity: 0;
+              transition: 0.4s;
+              height: 100%;
+              width: 100%;
+              backdrop-filter: blur(10px);
+              padding: 25px;
+              border-right: 1px solid rgba(255, 255, 255, 0.3);
+              border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+              border-radius: 30px;
+              box-shadow: 0 12px 14px rgba(0, 0, 0, 0.3); }
+              .portfolios .portfolio-cover .portfolio-container .slider-content .sliders .slider-item .overlay .date-perform {
+                color: #f53b57;
+                padding: 15px;
+                font-weight: 500; }
+              .portfolios .portfolio-cover .portfolio-container .slider-content .sliders .slider-item .overlay ul {
+                margin-left: 35px; }
+              .portfolios .portfolio-cover .portfolio-container .slider-content .sliders .slider-item .overlay .des-item {
+                list-style: circle;
+                margin-bottom: 5px; }
+              .portfolios .portfolio-cover .portfolio-container .slider-content .sliders .slider-item .overlay .btns {
+                margin-top: 25px;
+                margin-left: 35px;
+                display: flex; }
+                .portfolios .portfolio-cover .portfolio-container .slider-content .sliders .slider-item .overlay .btns:hover .item-btn {
+                  transition: 0.4s;
+                  transform: scale(0.8);
+                  transform-origin: center center; }
+                .portfolios .portfolio-cover .portfolio-container .slider-content .sliders .slider-item .overlay .btns .item-btn {
+                  width: 100px;
+                  background-color: rgba(0, 0, 0, 0.3);
+                  margin-right: 10px;
+                  text-align: center;
+                  padding: 10px;
+                  border-radius: 20px;
+                  cursor: pointer; }
+                  .portfolios .portfolio-cover .portfolio-container .slider-content .sliders .slider-item .overlay .btns .item-btn:hover {
+                    transform: scale(1);
+                    transform-origin: center center; }
+                  .portfolios .portfolio-cover .portfolio-container .slider-content .sliders .slider-item .overlay .btns .item-btn a {
+                    color: #fff;
+                    text-decoration: none; }
+          .portfolios .portfolio-cover .portfolio-container .slider-content .sliders .slider-item.one {
+            background: url(../assets/img/cvonline.png) top center no-repeat;
+            background-size: cover;
+            border-radius: 30px; }
+          .portfolios .portfolio-cover .portfolio-container .slider-content .sliders .slider-item.two {
+            background: url(../assets/img/elearning.png) top center no-repeat;
+            background-size: cover;
+            border-radius: 30px; }
+        .portfolios .portfolio-cover .portfolio-container .slider-content .indicated {
+          display: flex;
+          position: absolute;
+          bottom: -30px;
+          left: 50%;
+          transform: translateX(-50%); }
+          .portfolios .portfolio-cover .portfolio-container .slider-content .indicated .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.3);
+            margin: 5px; }
+      .portfolios .portfolio-cover .portfolio-container .prev-btn,
+      .portfolios .portfolio-cover .portfolio-container .next-btn {
+        padding: 0 50px;
+        transition: 0.4s; }
+        .portfolios .portfolio-cover .portfolio-container .prev-btn:hover,
+        .portfolios .portfolio-cover .portfolio-container .next-btn:hover {
+          transform: scale(1.4); }
+          .portfolios .portfolio-cover .portfolio-container .prev-btn:hover .icon-arrow,
+          .portfolios .portfolio-cover .portfolio-container .next-btn:hover .icon-arrow {
+            color: #fff; }
+        .portfolios .portfolio-cover .portfolio-container .prev-btn .icon-arrow,
+        .portfolios .portfolio-cover .portfolio-container .next-btn .icon-arrow {
+          transition: 0.4s;
+          color: rgba(0, 0, 0, 0.3);
+          font-size: 25px; }
+
+.slider-dot-active {
+  background-color: #fff !important; }
 
 .skills {
   position: relative;
