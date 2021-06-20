@@ -118,7 +118,7 @@ let slider_item = document.querySelectorAll(".slider-item");
 let dot = document.querySelectorAll(".dot");
 let sliderIndex = 0;
 let sliderOutIndex = 1;
-let nextSliderDelay = 2000;
+let nextSliderDelay = 8000;
 let prev = getEle("prev-icon").addEventListener("click", () => {
   sliderOutIndex = sliderIndex;
   sliderIndex -= 1;
@@ -154,16 +154,6 @@ let showSlider = (direction1, direction2) => {
   dot[sliderIndex].classList.add("slider-dot-active");
 };
 // Set auto next slider
-for (let i = 0; i < slider_item.length; i++) {
-  slider_item[i].onmouseenter = () => {
-    nextSliderDelay = 99999999999999;
-    console.log(nextSliderDelay);
-  };
-  slider_item[i].onmouseleave = () => {
-    nextSliderDelay = 2000;
-    console.log(nextSliderDelay);
-  };
-}
 let autoNextSlider = () => {
   setInterval(() => {
     sliderOutIndex = sliderIndex;
@@ -172,4 +162,5 @@ let autoNextSlider = () => {
   }, nextSliderDelay);
 };
 autoNextSlider();
+
 showSlider();
