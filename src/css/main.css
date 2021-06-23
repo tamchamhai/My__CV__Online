@@ -519,7 +519,8 @@ a[href="#contact"] {
 
 @media screen and (max-width: 425px) {
   .carousel {
-    padding: 0 15px; }
+    padding: 0 15px;
+    height: 120vh; }
     .carousel .carousel-cover .banner-left {
       width: 98%;
       height: 100vh; }
@@ -809,7 +810,7 @@ a[href="#contact"] {
 .slider-dot-active {
   background-color: #fff !important; }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .portfolios {
     height: 100vh; }
     .portfolios .portfolio-cover .portfolio-container .slider-content .sliders {

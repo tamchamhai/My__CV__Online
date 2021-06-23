@@ -164,3 +164,6 @@ let autoNextSlider = () => {
 autoNextSlider();
 
 showSlider();
+
+// Popup video
+new ModalVideo(".js-modal-btn");
