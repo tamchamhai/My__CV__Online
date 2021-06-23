@@ -343,6 +343,8 @@ a[href="#contact"] {
       justify-content: space-between; }
       .carousel .carousel-cover .banner-left h4 {
         font-weight: 500; }
+      .carousel .carousel-cover .banner-left .bios {
+        font-size: 12px; }
       .carousel .carousel-cover .banner-left .typing-wrap {
         display: flex;
         height: 20%; }
