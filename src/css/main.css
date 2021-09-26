@@ -780,6 +780,12 @@ a[href="#contact"] {
             border-radius: 30px;
             width: 600px;
             height: 380px; }
+          .portfolios .portfolio-cover .portfolio-container .slider-content .sliders .slider-item.three {
+            background: url(../assets/img/homemarket.jpg) top center no-repeat;
+            background-size: cover;
+            border-radius: 30px;
+            width: 600px;
+            height: 380px; }
         .portfolios .portfolio-cover .portfolio-container .slider-content .indicated {
           display: flex;
           position: absolute;

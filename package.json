@@ -9,7 +9,7 @@
   "author": "phi long",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^6.0.0"
+    "node-sass": "^6.0.1"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
